@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and editor state
+.env
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.DS_Store
+
+# Generated experiment outputs
+**/calibration_split/
+
+# Anonymous-review snapshot: these HDF5 samples contain generation-machine
+# absolute-path metadata in attrs. They can be regenerated with experiments/*.md.
+phase_switch_symmetry_multiseed/rollouts/seed_20260818.h5
+phase_switch_symmetry_rollouts_libero_drawer/*.h5
+phase_switch_symmetry_rollouts_se3/*.h5

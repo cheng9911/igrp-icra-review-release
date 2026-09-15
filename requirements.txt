@@ -1,0 +1,17 @@
+# Lightweight analysis-only environment.
+#
+# RQ4c (physical frozen response-shape transfer) only needs numpy / scipy /
+# pandas / matplotlib. RQ4b (semantic-mismatch transfer) additionally needs
+# h5py / scikit-learn / threadpoolctl because its scripts import the shared
+# baseline library (phase_switch_symmetry/phase_switch_baselines.py).
+#
+# No ManiSkill / torch / sapien required for RQ4b + RQ4c reproduction from the
+# shipped frozen law and derived physical data.
+numpy>=1.26,<2
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+h5py>=3.10
+scikit-learn>=1.4
+threadpoolctl
+transforms3d

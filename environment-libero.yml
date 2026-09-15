@@ -1,0 +1,28 @@
+# OPTIONAL environment — only needed to RE-COLLECT the RQ4a state-level
+# LIBERO / robosuite rollouts from scratch.
+#
+# The RQ4a benchmark and prepare scripts read pre-collected HDF5 and do NOT
+# need LIBERO. Re-running the two collect_* scripts (collect_libero_relation_suite.py,
+# collect_libero_drawer_probe.py) requires the LIBERO package. Install LIBERO
+# following its official instructions (https://github.com/Lifelong-Robot-Learning/LIBERO),
+# which pins its own robosuite / robomimic versions. This file documents the
+# Python level only; LIBERO itself is installed from source.
+#
+# The collection environment used `lerobot_libero` as its local conda name.
+name: maniskill_spectrum_libero
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy>=1.26,<2
+      - scipy>=1.11
+      - pandas>=2.0
+      - matplotlib>=3.8
+      - h5py>=3.10
+      - scikit-learn>=1.4
+      - threadpoolctl
+      - transforms3d
+      # LIBERO is installed from source; see LIBERO README for the pinned
+      # robomimic / robosuite requirements.
